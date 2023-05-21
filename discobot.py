@@ -3,7 +3,6 @@ from discord.ext import commands
 import os
 from dotenv import load_dotenv
 import logging
-from discord import app_commands
 #import handleMessages
 
 file = 'bot.env'
@@ -12,22 +11,26 @@ logging.basicConfig(level=logging.INFO)
 intents = discord.Intents.default()
 intents.message_content = True
 client = commands.Bot(command_prefix='>', intents=intents)
-tree = app_commands.CommandTree(client)
 
 token = os.getenv('TOKEN')
 
+
+@client.tree.command
+async def command():
+    pass
 
 
 #establish connection to discord api/server
 @client.event
 async def on_ready():
+    await client.tree.sync()
     print(f'{client.user} is online')
 
 
 @client.event
 async def on_message(message):
     if message.author == client.user:
-        return
+        pass
     else:
         handle(message.content)
     #create slash commands

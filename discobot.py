@@ -15,8 +15,8 @@ client = commands.Bot(command_prefix='>', intents=intents)
 token = os.getenv('TOKEN')
 
 
-@client.tree.command
-async def command():
+@client.command()
+async def command(ctx):
     pass
 
 

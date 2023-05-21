@@ -31,15 +31,12 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         pass
-    else:
-        handle(message.content)
-    #create slash commands
+
      
     
 client.run(token)
 
-def handle(message):
-    return
+
 
 
      

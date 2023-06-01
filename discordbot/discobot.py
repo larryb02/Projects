@@ -19,6 +19,18 @@ token = os.getenv('TOKEN')
 async def play(ctx, *,song_name):
     await ctx.send("Playing " + song_name)#will replace the parameter with the
                                          #function that gets the song link
+
+@client.command()
+async def pause(ctx):
+    return
+
+@client.command()
+async def queue(ctx):
+    return
+
+@client.command()
+async def skip(ctx):
+    return
     
 @client.event
 async def on_ready():

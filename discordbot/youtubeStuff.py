@@ -1,4 +1,8 @@
 
-
-def getSongLink(song_name):
+def search():
     return
+
+def pause():
+    return
+
+

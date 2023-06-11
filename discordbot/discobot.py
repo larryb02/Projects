@@ -14,9 +14,10 @@ class Larvin(commands.Cog):
         self.intents = discord.Intents.default()
         self.intents.message_content = True
         self.client = commands.Bot(command_prefix=commands.when_mentioned_or('$'),intents = self.intents)
-        pass
+        
     @commands.Cog.listener()
-
+    async def filler(ctx):
+        pass
 
 
 

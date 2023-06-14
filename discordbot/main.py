@@ -12,7 +12,14 @@ intents = discord.Intents.default()
 intents.message_content = True
 client = commands.Bot(command_prefix=commands.when_mentioned_or('$'),intents = intents)
 
-client.run(token)
+#print(os.listdir("C:\\"))
+
+
+# for f in os.listdir("./cogs"):
+# 	if f.endswith(".py"):
+# 		client.load_extension("cogs." + f[:-3])
+
+#client.run(token)
 
 
 

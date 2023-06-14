@@ -4,6 +4,8 @@ package LearnJavaSwing;
 import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon; //for images 
+import javax.swing.JButton;
+import javax.swing.JPanel;
 
 public class frame {
     public static void main(String[] args) {
@@ -25,7 +27,33 @@ public class frame {
         label.setText("yep");//can also be passed as parameter when creating JLabel object
         brame.add(label);
         label.setIcon(theBronJane);
-        brame.pack();
+
+        JLabel newLabel = new JLabel();
+        newLabel.setText("Hi");
+        
+
+        //JPanels
+
+        JPanel redPanel = new JPanel();
+        redPanel.setBackground(Color.red);
+        redPanel.setBounds(0,0,250,250);
+        redPanel.add(newLabel);
+        brame.add(redPanel);
+        
+        JPanel bluePanel = new JPanel();
+        bluePanel.setBackground(Color.black);
+        bluePanel.setBounds(420,0,250,250);
+        brame.add(bluePanel);
+        
+        JPanel greenPanel = new JPanel();
+        greenPanel.setBackground(Color.green);
+        greenPanel.setBounds(210,420,250,250);
+        brame.add(greenPanel);
+
+       
+        
+
+        
     }
     
 }

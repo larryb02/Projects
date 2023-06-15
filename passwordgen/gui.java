@@ -15,7 +15,7 @@ public class gui extends JFrame implements ActionListener{ //I will make this te
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == generateButton){
-
+            //run method that generates password string
         }
         //throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
     }

@@ -1,9 +1,17 @@
 package passwordgen;
 
+import javax.swing.SwingUtilities;
+
 public class PassGenLauncher {
     
     public static void main(String[] args) {
-        PassGui launcher = new PassGui();
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run(){
+                new PassGui();
+            }
+        });
+        
+        //System.out.println(launcher.getLayout());
         
         
     }
